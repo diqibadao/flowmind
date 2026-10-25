@@ -23,6 +23,18 @@ macOS 原生 · 本地存储 + iCloud 备份 · AI 改图 · Git 版本历史 ·
 
 ---
 
+
+## 界面
+
+<p align="center">
+  <img src="assets/screenshots/01-flowchart.png" width="49%" alt="微服务架构图">
+  <img src="assets/screenshots/02-swimlane.png" width="49%" alt="电商订单履约泳道图">
+</p>
+<p align="center">
+  <img src="assets/screenshots/03-er.png" width="49%" alt="电商核心实体关系图">
+  <img src="assets/screenshots/04-templates.png" width="49%" alt="模板库">
+</p>
+
 ## 七个核心能力
 
 | | 能力 | 说明 |
