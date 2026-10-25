@@ -26,9 +26,8 @@ const guardPath = KERNEL.guardPath;
 // Agent 未读角标簿（App 图库读它；两处路径解析必须同文件）
 function inboxFile() {
   if (process.env.FLOWMIND_INBOX) return process.env.FLOWMIND_INBOX;
-  const cands = KERNEL.appDataDirs().map(function (d) { return path.join(d, 'agent_inbox.json'); });
-  for (const c of cands) if (fs.existsSync(path.dirname(c))) return c;
-  return cands[cands.length - 1];
+  // 簿记放图库目录：App 容器被 macOS 保护，跨进程读不了也写不进（实测 EPERM）
+  return path.join(docsDir(), '.flowmind-agent-inbox.json');
 }
 function markUnread(p) {
   let arr = [];
@@ -53,6 +52,9 @@ function uniquePath(stem) {
 // === 工具实现（返回 {text, isError?}） ===
 const tools = {
   create_diagram: function (a) {
+    // 版本握手：先确认 App 能读我们写的格式，再动手
+    const k = KERNEL.checkContract();
+    if (k.ok === false) return { text: k.message, isError: true };
     let doc = null, outcome = null;
     if (a && typeof a.mermaid === 'string' && a.mermaid.trim()) {
       const parsed = MermaidIO.mermaidToDoc(a.mermaid);
