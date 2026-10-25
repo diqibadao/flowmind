@@ -1,0 +1,26 @@
+name: Bug 报告
+description: 报告一个可以复现的问题
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 现象
+      description: 发生了什么？期望是什么？
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: "1. 打开 …\n2. 点击 …\n3. 看到 …"
+    validations: {required: true}
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: FlowMind → 设置 → 关于 里能看到
+    validations: {required: true}
+  - type: input
+    id: os
+    attributes:
+      label: macOS 版本

@@ -1,30 +1,26 @@
-# flowmind-mcp
+# FlowMind
 
-FlowMind 的 MCP 服务与命令行工具：让 Claude Code / Codex / Cursor 等 Agent 直接生成**可编辑**的 `.flowmind` 流程图。
+结构化流程图与思维导图工具（macOS）。图是真的对象：正交连线、泳道、ER、思维导图、智能布局，AI 直接在画布上改图。
 
-## 用法
+- 产品与隐私说明：https://diqibadao.github.io/flowmind/
+- 隐私协议：https://diqibadao.github.io/flowmind/privacy.html
+- 反馈与支持：https://github.com/diqibadao/flowmind/issues
 
-不需要安装，`npx` 直接从 Release 取：
+## MCP 工具
+
+让 Claude Code / Codex / Cursor 等 Agent 直接生成可编辑的 `.flowmind` 图：
 
 ```
-npx -y https://github.com/diqibadao/flowmind-mcp/releases/download/v0.7.0/flowmind-mcp-0.7.0.tgz
+npx -y https://github.com/diqibadao/flowmind/releases/download/v0.7.0/flowmind-mcp-0.7.0.tgz
 ```
 
-在 FlowMind App 的「设置 → MCP」里点「复制接入提示词」，粘给 Agent 即可——它会自己注册、自测、报结果。
+源码与发布说明见 [mcp/](mcp/)。内核校验逻辑随发布包分发，不在本仓库中。
 
-## 工具
+## 本仓库说明
 
-| 工具 | 作用 |
-|---|---|
-| `create_diagram` | 用 Mermaid 或 FlowMind JSON 生成一张图，落进 App 当前图库 |
-| `list_documents` / `get_document` | 列出 / 读取图库里的图 |
-| `export_document` | 转成 Mermaid / draw.io / JSON |
-| `open_document` | 用 FlowMind 打开某张图，供人验收 |
+本仓库用于：产品介绍、隐私协议、问题反馈、MCP 工具的分发。
+FlowMind App 的源码不在本仓库中。
 
-## 说明
+## License
 
-- 仅本机 stdio，不开网络端口
-- 只读写 App 图库目录，越界路径直接拒绝
-- 校验与 FlowMind App 使用**同一份内核**，不会接受 App 打不开的文件
-
-本仓库只分发工具，不含 FlowMind App 源码。发布流程见 [RELEASE.md](RELEASE.md)。
+工具部分分发但不授权再发布（UNLICENSED）；网站文案 © FlowMind。

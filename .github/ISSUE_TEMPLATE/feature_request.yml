@@ -1,0 +1,14 @@
+name: 功能建议
+description: 想要什么能力
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: 你想完成什么
+      description: 描述场景，而不是实现方式
+    validations: {required: true}
+  - type: textarea
+    id: now
+    attributes:
+      label: 现在怎么绕过去

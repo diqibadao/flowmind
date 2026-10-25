@@ -16,8 +16,9 @@ npx -y https://github.com/<你的仓库>/releases/download/v<版本>/flowmind-mc
 ## 二、发一版
 
 ```bash
-cd packages/flowmind-mcp
+cd packages/flowmind-mcp   # 主仓库内路径
 npm pack                     # 产出 flowmind-mcp-<版本>.tgz，prepack 会自动同步内核
+# 然后把包里的 3 个源码文件同步到本仓库 mcp/ 目录并提交
 ```
 
 然后：
