@@ -1,125 +1,217 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>隐私协议 · FlowMind Privacy Policy</title>
-<style>:root{--fg:#1c1a17;--muted:#6b6357;--line:#e7e1d8;--bg:#fffdfa;--accent:#4F55E8;--soft:#f6f3ee}
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐私协议 · Privacy Policy</title><style>
+:root{--fg:#17161a;--muted:#6b6673;--line:#e9e6ef;--bg:#fbfafd;--card:#fff;--accent:#4F55E8;--soft:#f2f1f9}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:56px 24px 96px}
-header.site{display:flex;align-items:center;gap:10px;margin-bottom:48px}
-header.site img{width:28px;height:28px;border-radius:8px}
-header.site b{font-size:15px;letter-spacing:.2px}
-nav.lang{margin-left:auto;display:flex;gap:6px;font-size:13px}
-nav.lang button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit}
-nav.lang button.on{background:var(--accent);border-color:var(--accent);color:#fff}
-h1{font-size:30px;line-height:1.3;margin:0 0 14px;letter-spacing:-.3px}
-h2{font-size:17px;margin:38px 0 10px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.site{position:sticky;top:0;z-index:9;backdrop-filter:blur(14px);background:rgba(251,250,253,.82);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:10px;height:62px;max-width:820px;margin:0 auto;padding:0 24px}
+header.site img{width:26px;height:26px;border-radius:8px}
+header.site b{font-size:15px}
+header nav{margin-left:auto;display:flex;gap:16px;align-items:center;font-size:14px;color:var(--muted)}
+header nav a{color:var(--muted)}
+.lang{display:flex;gap:6px;font-size:13px}
+.lang button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:4px 11px;cursor:pointer;font:inherit}
+.lang button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{max-width:820px;margin:0 auto;padding:56px 24px 90px}
+h1{font-size:34px;letter-spacing:-.6px;margin:0 0 6px}
+.meta{color:var(--muted);font-size:14px;margin:0 0 26px}
+.lead{font-size:17px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 34px}
+h2{font-size:19px;margin:34px 0 8px}
 p,li{color:var(--muted)}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.lead{font-size:17px;color:var(--fg)}
-.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
-code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
-pre{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow:auto}
-footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-[data-lang]{display:none}[data-lang].on{display:block}</style>
+ul{padding-left:20px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--soft);color:var(--fg);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:var(--soft);padding:2px 6px;border-radius:6px}
+footer{border-top:1px solid var(--line);padding:28px 0 60px;color:var(--muted);font-size:13.5px}
+footer .wrap{max-width:820px;margin:0 auto;padding:0 24px;display:flex;gap:16px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+[data-lang]{display:none}[data-lang].on{display:block}
+</style></head><body>
+<header class="site"><div class="wrap">
+  <img src="../assets/logo.png" alt="FlowMind"><b>FlowMind</b>
+  <nav><a href="./index.html">主页</a><a href="./support.html">支持</a>
+  <span class="lang"><button type="button" class="on" data-set="zh">中文</button><button type="button" data-set="en">EN</button></span></nav>
+</div></header>
+<main><div data-lang="zh" class="on">
+<h1>隐私协议</h1>
+<p class="meta">生效日期：2026 年 10 月 25 日 · 最后更新：2026 年 10 月 25 日 · 适用于 FlowMind App、MCP 工具与本网站</p>
+<p class="lead"><b>一句话：我们不收集你的任何数据。</b>没有账号，没有遥测，没有分析，没有广告 SDK，我们没有服务器可以存放你的图。</p>
 
-</head>
-<body>
-<div class="wrap">
-<header class="site">
-  <img src="../assets/logo.png" alt="FlowMind">
-  <b>FlowMind</b>
-  <nav class="lang">
-    <button type="button" class="on" data-set="zh">中文</button>
-    <button type="button" data-set="en">English</button>
-  </nav>
-</header>
+<h2>1. 这份协议管什么</h2>
+<p>适用于三样东西：macOS 上的 <b>FlowMind 应用</b>、随应用使用的 <b>MCP 工具</b>（<code>flowmind-mcp</code>），以及本介绍网站。</p>
 
-<div data-lang="zh" class="on">
-  <h1>隐私协议</h1>
-  <p>最后更新：2026 年 10 月 25 日</p>
-  <p class="lead">一句话：FlowMind 不收集你的任何数据。没有账号，没有遥测，没有分析，没有第三方追踪 SDK。</p>
+<h2>2. 我们收集什么</h2>
+<p><b>什么也不收集。</b>具体地说，我们不收集、不上传、不存储：</p>
+<ul>
+  <li>你的图、文字、文件名、文件夹结构</li>
+  <li>你的使用行为、点击、停留时长</li>
+  <li>设备型号、系统版本、安装 ID、崩溃堆栈</li>
+  <li>任何联系方式（除非你主动在 GitHub Issues 里公开）</li>
+</ul>
+<p>应用内不包含任何统计分析、广告或第三方追踪 SDK。</p>
 
-  <h2>1. 我们不收集什么</h2>
-  <p>我们不收集、不上传、不存储你的图、文本、文件名、使用行为、设备信息或崩溃日志。App 内没有任何分析或广告 SDK。</p>
+<h2>3. 数据存在哪里</h2>
+<table>
+  <tr><th>数据</th><th>位置</th><th>谁能访问</th></tr>
+  <tr><td>流程图 / 思维导图</td><td>你在设置里选的<b>图库文件夹</b>（或你另存为的位置）</td><td>只有你；就是普通文件</td></tr>
+  <tr><td>应用设置、草稿、图库缩略图</td><td>macOS 应用沙盒容器内</td><td>只有你</td></tr>
+  <tr><td>AI 服务密钥</td><td>macOS <b>钥匙串</b>（Keychain）</td><td>只有你</td></tr>
+  <tr><td>本地诊断日志</td><td>应用沙盒容器内 <code>logs/</code></td><td>只有你；不上传</td></tr>
+</table>
 
-  <h2>2. 你的数据在哪里</h2>
-  <ul>
-    <li><b>图文件</b>：保存在你选择的「图库文件夹」里，或你另存为的位置。它们就是普通文件，归你所有。</li>
-    <li><b>设置与草稿</b>：保存在本机的应用数据目录（macOS 沙盒容器内）。</li>
-    <li><b>AI 密钥</b>：只保存在 macOS 系统钥匙串（Keychain），不写进任何配置文件、日志或导出文件。</li>
-  </ul>
+<h2>4. 本地日志（如实说明）</h2>
+<p>为了排查界面异常，应用会把前端报错写入本机的 <code>logs/frontend.log</code>：单条不超过 2KB，文件不超过 1MB，超出滚动覆盖，内容仅包含错误信息与堆栈。<b>这些日志不会离开你的电脑</b>，也不会自动发送给任何人。你可以在 Finder 里直接删除它们。</p>
 
-  <h2>3. iCloud 备份（可选，默认关闭）</h2>
-  <p>你可以开启「备份副本」：保存后由 macOS 把文件复制到 iCloud Drive 里 FlowMind 的文件夹。传输与静态加密由 Apple 负责，我们没有服务器、无法访问这些文件。本地文件始终是唯一真身。</p>
+<h2>5. iCloud 备份（可选，默认关闭）</h2>
+<p>开启后，每次保存会把当前文件复制一份到 iCloud Drive 中 FlowMind 的文件夹，作为<b>备份副本</b>。传输与静态加密由 Apple 负责，我们没有服务器、也无法访问这些文件。本地文件始终是唯一真身；断网、未登录时保存照常工作。</p>
 
-  <h2>4. AI 功能会发送什么</h2>
-  <p>只有当你<b>主动使用</b> AI 功能时，你输入的内容与当前图的相关内容才会发送到<b>你自己配置</b>的模型服务（OpenAI 兼容接口，或本机的 Ollama）。我们不经过、也不运营任何中转服务器。若使用本机 Ollama，数据不离开你的电脑。</p>
+<h2>6. AI 功能会发送什么</h2>
+<p>只有当你<b>主动使用</b> AI 功能（生成、改图、优化、文档）时：</p>
+<ul>
+  <li>发送内容是：你在对话框里输入的文字，以及当前图的相关内容</li>
+  <li>接收方是：<b>你自己配置</b>的模型服务（OpenAI 兼容接口的地址与模型），或你本机的 Ollama</li>
+  <li>我们<b>不运营</b>任何中转或代理服务器，也不记录你的请求</li>
+  <li>使用 Ollama 时，数据不会离开你的电脑</li>
+</ul>
+<p>请注意：你选择的模型服务商如何处理这些内容，受<b>他们自己的隐私政策</b>约束。</p>
 
-  <h2>5. Agent / MCP 工具</h2>
-  <p>MCP 工具运行在你自己的电脑上，仅通过本机标准输入输出通信，不开放网络端口；它只在你指定的图库目录内读写文件。</p>
+<h2>7. MCP 工具与 Agent</h2>
+<p><code>flowmind-mcp</code> 是运行在你电脑上的本地程序，Agent 通过它把图写进你的图库：</p>
+<ul>
+  <li>只用本机标准输入输出通信，<b>不开放任何网络端口</b></li>
+  <li>只在你在设置里指定的图库目录内读写，越界路径会被直接拒绝</li>
+  <li>不收集、不上报任何信息</li>
+</ul>
+<p>是你在 Agent 里下的指令决定它写什么；FlowMind 不参与、也看不到你与 Agent 的对话。</p>
 
-  <h2>6. 你的权利</h2>
-  <p>因为数据都在你自己的电脑上，删除即彻底删除：删掉图库文件夹里的文件、清空 App 数据目录即可。我们没有任何副本可供导出或删除。</p>
+<h2>8. 应用何时联网</h2>
+<p>只有两种情况：① 你主动使用 AI 功能时，连接你配置的模型服务；② 你开启 iCloud 备份时，由 macOS 连接 iCloud。除此之外，应用在离线状态下功能完整。</p>
 
-  <h2>7. 儿童</h2>
-  <p>本应用不面向 13 岁以下儿童，也不收集任何个人信息。</p>
+<h2>9. 系统权限</h2>
+<ul>
+  <li><b>文件访问</b>：只访问你在系统面板里主动选择的文件或文件夹（通过 macOS 安全作用域书签记住授权）</li>
+  <li><b>钥匙串</b>：用于保存你自己填写的 AI 密钥</li>
+  <li>我们<b>不使用</b>相机、麦克风、通讯录、定位、剪贴板读取等权限</li>
+</ul>
 
-  <h2>8. 变更与联系</h2>
-  <p>本协议若更新，会修改本页顶部的日期。如有疑问，请通过 <a href="https://github.com/diqibadao/flowmind/issues">GitHub Issues</a> 联系。</p>
-</div>
+<h2>10. 第三方组件</h2>
+<p>应用中包含若干开源库（清单可在「设置 → 关于 → 开放源代码许可」查看）。它们在本机运行，不涉及数据外传。我们不含任何商业分析或广告组件。</p>
 
-<div data-lang="en">
-  <h1>Privacy Policy</h1>
-  <p>Last updated: October 25, 2026</p>
-  <p class="lead">In one sentence: FlowMind collects nothing. No accounts, no telemetry, no analytics, no third-party tracking SDKs.</p>
+<h2>11. 你的权利</h2>
+<p>因为数据都在你自己的电脑上，所以：</p>
+<ul>
+  <li><b>访问 / 导出</b>：图库文件夹里的文件直接可用</li>
+  <li><b>删除</b>：删掉文件、清空应用数据目录即可，彻底删除</li>
+  <li><b>撤回</b>：关闭 iCloud 备份，或清空 AI 密钥</li>
+</ul>
+<p>我们手上没有任何副本，因此也无法替你导出或删除——这正是本地优先的含义。</p>
 
-  <h2>1. What we do not collect</h2>
-  <p>We do not collect, upload or store your diagrams, text, file names, usage behaviour, device information or crash logs. The app contains no analytics or advertising SDKs.</p>
+<h2>12. 数据保留</h2>
+<p>我们不保留任何数据。你本机上的文件由你决定保留多久。</p>
 
-  <h2>2. Where your data lives</h2>
-  <ul>
-    <li><b>Diagram files</b>: in the library folder you chose, or wherever you save them. They are ordinary files that belong to you.</li>
-    <li><b>Settings and drafts</b>: in the local app data directory (the macOS sandbox container).</li>
-    <li><b>AI keys</b>: stored only in the macOS Keychain — never in configuration files, logs or exports.</li>
-  </ul>
+<h2>13. 儿童</h2>
+<p>本应用不面向 13 岁以下儿童，也不收集任何个人信息。</p>
 
-  <h2>3. iCloud backup (optional, off by default)</h2>
-  <p>You may enable backup copies: after saving, macOS copies the file into FlowMind's folder in iCloud Drive. Transport and encryption at rest are handled by Apple. We run no servers and cannot access these files. The local file is always the original.</p>
+<h2>14. 跨境传输</h2>
+<p>我们不进行任何数据传输。若你使用云端 AI 服务，数据由该服务商按其所在地与条款处理。</p>
 
-  <h2>4. What AI features send</h2>
-  <p>Only when you <b>actively use</b> an AI feature, your input and the relevant part of the current diagram are sent to <b>the model service you configured yourself</b> (an OpenAI-compatible endpoint, or a local Ollama instance). We operate no proxy or relay. With Ollama, data never leaves your Mac.</p>
+<h2>15. 协议变更</h2>
+<p>如果本协议有实质变化，我们会更新本页顶部的日期，并在 GitHub 仓库中留存提交记录。</p>
 
-  <h2>5. Agent / MCP tool</h2>
-  <p>The MCP tool runs on your own machine, communicates only over local stdio, opens no network ports, and reads/writes files only inside the library folder you specified.</p>
+<h2>16. 联系我们</h2>
+<p>通过 <a href="https://github.com/diqibadao/flowmind/issues">GitHub Issues</a> 与我们联系。涉及安全问题的报告，请避免公开细节，先私下说明。</p>
+</div><div data-lang="en">
+<h1>Privacy Policy</h1>
+<p class="meta">Effective: October 25, 2026 · Last updated: October 25, 2026 · Covers the FlowMind app, the MCP tool, and this website</p>
+<p class="lead"><b>In one sentence: we collect nothing.</b> No account, no telemetry, no analytics, no ad SDKs — and we run no servers that could hold your diagrams.</p>
 
-  <h2>6. Your rights</h2>
-  <p>Because all data stays on your computer, deleting it is complete: remove the files from your library folder and clear the app data directory. We hold no copies to export or delete.</p>
+<h2>1. Scope</h2>
+<p>This policy covers the <b>FlowMind macOS app</b>, the bundled <b>MCP tool</b> (<code>flowmind-mcp</code>), and this website.</p>
 
-  <h2>7. Children</h2>
-  <p>This app is not directed to children under 13 and collects no personal information.</p>
+<h2>2. What we collect</h2>
+<p><b>Nothing.</b> Specifically, we do not collect, upload or store:</p>
+<ul>
+  <li>Your diagrams, text, file names or folder structure</li>
+  <li>Usage behaviour, clicks or time spent</li>
+  <li>Device model, OS version, install ID or crash stacks</li>
+  <li>Contact details (unless you post them publicly in GitHub Issues)</li>
+</ul>
+<p>The app contains no analytics, advertising or third-party tracking SDKs.</p>
 
-  <h2>8. Changes and contact</h2>
-  <p>If this policy changes, the date above will be updated. Questions? Reach us via <a href="https://github.com/diqibadao/flowmind/issues">GitHub Issues</a>.</p>
-</div>
+<h2>3. Where data lives</h2>
+<table>
+  <tr><th>Data</th><th>Location</th><th>Access</th></tr>
+  <tr><td>Diagrams</td><td>The <b>library folder</b> you chose (or wherever you save)</td><td>Only you — they are ordinary files</td></tr>
+  <tr><td>Settings, drafts, thumbnails</td><td>Inside the macOS app sandbox container</td><td>Only you</td></tr>
+  <tr><td>AI keys</td><td>macOS <b>Keychain</b></td><td>Only you</td></tr>
+  <tr><td>Local diagnostics log</td><td><code>logs/</code> inside the sandbox container</td><td>Only you — never uploaded</td></tr>
+</table>
 
-<footer>
-  <span data-lang="zh" class="on">© 2026 FlowMind · <a href="./privacy.html">隐私协议</a> · <a href="./support.html">支持</a> · <a href="https://github.com/diqibadao/flowmind/issues">反馈</a></span>
-  <span data-lang="en">© 2026 FlowMind · <a href="./privacy.html">Privacy</a> · <a href="./support.html">Support</a> · <a href="https://github.com/diqibadao/flowmind/issues">Issues</a></span>
-</footer>
-</div>
-<script>
-document.querySelectorAll('nav.lang button').forEach(function(b){
-  b.addEventListener('click', function(){
-    var l = b.dataset.set;
-    document.querySelectorAll('nav.lang button').forEach(function(x){ x.classList.toggle('on', x === b); });
-    document.querySelectorAll('[data-lang]').forEach(function(el){ el.classList.toggle('on', el.dataset.lang === l); });
-    document.documentElement.lang = (l === 'zh' ? 'zh-CN' : 'en');
-  });
-});
-</script>
-</body>
-</html>
+<h2>4. Local logs (full disclosure)</h2>
+<p>To help diagnose UI errors, the app writes front-end errors to <code>logs/frontend.log</code> on your machine: each entry ≤ 2KB, file ≤ 1MB, rolling. <b>These logs never leave your Mac</b> and are never sent automatically. You can delete them in Finder.</p>
+
+<h2>5. iCloud backup (optional, off by default)</h2>
+<p>When enabled, each save copies the file into FlowMind's folder in iCloud Drive as a <b>backup copy</b>. Apple handles transport and encryption at rest; we run no servers and cannot access these files. The local file is always the original. Saving works offline and when signed out.</p>
+
+<h2>6. What AI features send</h2>
+<p>Only when you <b>actively use</b> an AI feature (generate, edit, optimise, document):</p>
+<ul>
+  <li>What is sent: your typed input plus the relevant part of the current diagram</li>
+  <li>Where it goes: <b>the model service you configured yourself</b> (an OpenAI-compatible endpoint), or a local Ollama instance</li>
+  <li>We operate <b>no relay or proxy</b> and keep no request records</li>
+  <li>With Ollama, data never leaves your Mac</li>
+</ul>
+<p>Your chosen model provider processes that content under <b>their own</b> privacy policy.</p>
+
+<h2>7. The MCP tool and Agents</h2>
+<p><code>flowmind-mcp</code> runs locally so an Agent can write diagrams into your library:</p>
+<ul>
+  <li>Communicates only over local stdio — <b>opens no network ports</b></li>
+  <li>Reads and writes only inside the library folder you specified; out-of-scope paths are rejected</li>
+  <li>Collects and reports nothing</li>
+</ul>
+<p>What it writes is determined by the instructions you give your Agent; FlowMind neither sees nor participates in that conversation.</p>
+
+<h2>8. When the app uses the network</h2>
+<p>Only two cases: (1) you actively use an AI feature — it connects to the model service you configured; (2) you enable iCloud backup — macOS connects to iCloud. Otherwise the app is fully functional offline.</p>
+
+<h2>9. System permissions</h2>
+<ul>
+  <li><b>Files</b>: only what you pick in a system panel (access is remembered via a macOS security-scoped bookmark)</li>
+  <li><b>Keychain</b>: to store the AI key you enter</li>
+  <li>We do <b>not</b> use camera, microphone, contacts, location or clipboard reading</li>
+</ul>
+
+<h2>10. Third-party components</h2>
+<p>The app bundles several open-source libraries (see Settings → About → Open-source licenses). They run locally and transmit nothing. No commercial analytics or ad components are included.</p>
+
+<h2>11. Your rights</h2>
+<ul>
+  <li><b>Access / export</b>: the files in your library folder are directly usable</li>
+  <li><b>Erasure</b>: delete the files and clear the app data directory — that is complete deletion</li>
+  <li><b>Withdraw</b>: disable iCloud backup, or clear your AI key</li>
+</ul>
+<p>We hold no copies, so we cannot export or delete on your behalf — that is what local-first means.</p>
+
+<h2>12. Retention</h2>
+<p>We retain nothing. How long files stay on your Mac is up to you.</p>
+
+<h2>13. Children</h2>
+<p>Not directed to children under 13; we collect no personal information.</p>
+
+<h2>14. International transfers</h2>
+<p>We transfer nothing. If you use a cloud AI provider, that provider processes data under its own terms and jurisdiction.</p>
+
+<h2>15. Changes</h2>
+<p>If this policy changes materially, the date above is updated and the commit history in the GitHub repository keeps the record.</p>
+
+<h2>16. Contact</h2>
+<p>Reach us via <a href="https://github.com/diqibadao/flowmind/issues">GitHub Issues</a>. For security reports, avoid posting details publicly and describe the issue first.</p>
+</div></main>
+<footer><div class="wrap"><span>© 2026 FlowMind</span><a href="./index.html">主页</a><a href="./support.html">支持</a><a href="https://github.com/diqibadao/flowmind">GitHub</a></div></footer>
+<script>document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){var l=b.dataset.set;document.querySelectorAll('.lang button').forEach(function(x){x.classList.toggle('on',x===b);});document.querySelectorAll('[data-lang]').forEach(function(el){el.classList.toggle('on',el.dataset.lang===l);});document.documentElement.lang=(l==='zh'?'zh-CN':'en');});});</script>
+</body></html>

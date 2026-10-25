@@ -3,85 +3,219 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FlowMind — 结构化流程图工具</title>
-<style>:root{--fg:#1c1a17;--muted:#6b6357;--line:#e7e1d8;--bg:#fffdfa;--accent:#4F55E8;--soft:#f6f3ee}
+<title>FlowMind — 结构化流程图与思维导图（macOS）</title>
+<meta name="description" content="FlowMind — 结构化流程图与思维导图工具（macOS）。图是真对象，文件在你自己的文件夹里，AI 改图先给差异预览。">
+<style>:root{--fg:#17161a;--muted:#6b6673;--line:#e9e6ef;--bg:#fbfafd;--card:#fff;--accent:#4F55E8;--accent2:#7C82F2;--soft:#f2f1f9}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:56px 24px 96px}
-header.site{display:flex;align-items:center;gap:10px;margin-bottom:48px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.site{position:sticky;top:0;z-index:9;backdrop-filter:blur(14px);background:rgba(251,250,253,.82);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:10px;height:62px}
 header.site img{width:28px;height:28px;border-radius:8px}
 header.site b{font-size:15px;letter-spacing:.2px}
-nav.lang{margin-left:auto;display:flex;gap:6px;font-size:13px}
-nav.lang button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit}
-nav.lang button.on{background:var(--accent);border-color:var(--accent);color:#fff}
-h1{font-size:30px;line-height:1.3;margin:0 0 14px;letter-spacing:-.3px}
-h2{font-size:17px;margin:38px 0 10px}
-p,li{color:var(--muted)}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.lead{font-size:17px;color:var(--fg)}
-.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
-code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
-pre{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow:auto}
-footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-[data-lang]{display:none}[data-lang].on{display:block}</style>
-
+header nav{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:14px;color:var(--muted)}
+header nav a{color:var(--muted)}header nav a:hover{color:var(--accent);text-decoration:none}
+.lang{display:flex;gap:6px;font-size:13px;margin-left:8px}
+.lang button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:4px 11px;cursor:pointer;font:inherit}
+.lang button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.hero{padding:84px 0 60px;text-align:center}
+.hero img.logo{width:76px;height:76px;border-radius:20px;box-shadow:0 16px 40px -12px rgba(79,85,232,.45)}
+.hero h1{font-size:44px;line-height:1.18;letter-spacing:-1px;margin:24px 0 14px}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:640px;margin:0 auto 30px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;border-radius:12px;font-size:15px;font-weight:560;border:1px solid transparent;transition:transform .12s,box-shadow .18s}
+.btn:active{transform:scale(.985)}
+.btn.primary{background:linear-gradient(180deg,var(--accent2),var(--accent));color:#fff;box-shadow:0 10px 26px -10px rgba(79,85,232,.7)}
+.btn.ghost{background:#fff;border-color:var(--line);color:var(--fg)}
+.btn.disabled{background:#eef0f6;color:#8b8fa3;cursor:default}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:26px;letter-spacing:-.4px;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.card h3{margin:0 0 6px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.card .ico{width:34px;height:34px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--accent);font-weight:700}
+.rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.rows div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--muted)}
+.rows b{display:block;color:var(--fg);font-size:14.5px;margin-bottom:2px}
+pre{background:#17161a;color:#e8e6f2;border-radius:14px;padding:18px 20px;overflow:auto;font-size:13.5px;line-height:1.7;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre .c{color:#8b8fa3}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;background:var(--soft);padding:2px 6px;border-radius:6px}
+.steps{counter-reset:s;display:grid;gap:14px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600}
+footer{border-top:1px solid var(--line);padding:36px 0 60px;color:var(--muted);font-size:13.5px}
+footer .wrap{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--muted)}
+[data-lang]{display:none}[data-lang].on{display:block}
+@media(max-width:640px){.hero h1{font-size:32px}.hero{padding:56px 0 40px}}</style>
 </head>
 <body>
-<div class="wrap">
-<header class="site">
-  <img src="../assets/logo.png" alt="FlowMind">
-  <b>FlowMind</b>
-  <nav class="lang">
-    <button type="button" class="on" data-set="zh">中文</button>
-    <button type="button" data-set="en">English</button>
+<header class="site"><div class="wrap">
+  <img src="../assets/logo.png" alt="FlowMind"><b>FlowMind</b>
+  <nav>
+    <a href="./index.html" data-nav-zh>概览</a><a href="./support.html">支持</a><a href="./privacy.html">隐私</a>
+    <a href="https://github.com/diqibadao/flowmind/issues">反馈</a>
+    <span class="lang"><button type="button" class="on" data-set="zh">中文</button><button type="button" data-set="en">EN</button></span>
   </nav>
-</header>
-
-<div data-lang="zh" class="on">
-  <h1>把流程画对，而不是只画出来</h1>
-  <p class="lead">FlowMind 是一款面向 macOS 的流程图与思维导图工具：结构化图形、智能布局、AI 帮你改图，数据始终在你自己手里。</p>
-  <div class="card">
-    <p style="margin:0"><b>图是真的对象</b> —— 正交连线、泳道、ER、思维导图，不是图片；能选中、能改、能对齐。</p>
+</div></header>
+<main><div data-lang="zh" class="on">
+<div class="hero"><div class="wrap">
+  <img class="logo" src="../assets/logo.png" alt="FlowMind">
+  <h1>让流程画得<em>对</em>，<br>而不是只画得出来</h1>
+  <p class="lead">FlowMind 是一款 macOS 流程图与思维导图工具。每一根连线都是对象，每一张图都是你自己的文件。</p>
+  <div class="cta">
+    <a class="btn disabled" href="#status">App Store 即将上架</a>
+    <a class="btn ghost" href="#agent">让 Agent 帮你画</a>
+    <a class="btn ghost" href="https://github.com/diqibadao/flowmind">GitHub</a>
   </div>
-  <h2>你的图放在自己的文件夹里</h2>
-  <p>选择一个文件夹作为图库，所有图和普通文件一样躺在 Finder 里——可以备份、可以 git、可以直接发给同事。</p>
-  <h2>让 AI 帮你画</h2>
-  <p>接入任意 MCP 客户端（Claude Code、Codex、Cursor 等），一句话生成可编辑的流程图：</p>
+</div></div>
+
+<section><div class="wrap">
+  <h2>三件和别处不一样的事</h2>
+  <p class="sub">不是「又一个画图软件」，是三个具体的选择。</p>
+  <div class="grid">
+    <div class="card"><div class="ico">◈</div><h3>图是真的对象</h3><p>正交连线自动绕行、锚点吸附、泳道、ER 表、思维导图——能选中、能改、能对齐，不是一张截图。</p></div>
+    <div class="card"><div class="ico">▤</div><h3>文件在你自己手里</h3><p>图库就是你选的文件夹。Finder 里能找到，能备份、能 git、能直接发给同事。</p></div>
+    <div class="card"><div class="ico">✦</div><h3>AI 先给你看差异</h3><p>改图之前先展示变更，确认后才落到画布；每一步都能撤销、都能回到历史版本。</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>能力全景</h2>
+  <p class="sub">从一张草图到可以交付的架构图。</p>
+  <div class="rows">
+    <div><b>画布</b>流程图 / 思维导图 / 泳道 / ER / 鱼骨图 / 组织架构，19 种节点类型</div>
+    <div><b>连线</b>正交路由、锚点吸附、箭头线型、标签</div>
+    <div><b>布局</b>分层 / 树状 / 力导向，一键整理</div>
+    <div><b>对齐</b>左中右、上下、等距、层级、锁定、微调</div>
+    <div><b>图库</b>缩略图、搜索、收藏、回收站、我的模板</div>
+    <div><b>模板</b>微服务、数据湖仓、RAG、订单履约、状态机、ER、用户旅程…</div>
+    <div><b>AI</b>生成 / 改图 / 优化 / 文档，差异预览，OpenAI 兼容或本机 Ollama</div>
+    <div><b>版本</b>自动留档、手动永久、三色 diff、一键恢复</div>
+    <div><b>格式</b>Mermaid / draw.io / Markdown / OPML / CSV / FreeMind / SVG / PNG / PDF</div>
+  </div>
+</div></section>
+
+<section id="agent"><div class="wrap">
+  <h2>让 Agent 帮你画</h2>
+  <p class="sub">接到任意 MCP 客户端，一句话生成可编辑的图。</p>
   <pre>npx -y https://github.com/diqibadao/flowmind/releases/download/v0.7.0/flowmind-mcp-0.7.0.tgz</pre>
-  <p>详细接入方式见 <a href="./support.html">支持页</a>。</p>
+  <div class="steps" style="margin-top:22px">
+    <div class="step"><div class="n">1</div><div><b>复制提示词</b><br>FlowMind → 设置 → MCP → 「复制接入提示词」</div></div>
+    <div class="step"><div class="n">2</div><div><b>粘给 Agent</b><br>Claude Code / Codex / Cursor 等任意客户端</div></div>
+    <div class="step"><div class="n">3</div><div><b>等它说完「成功了」</b><br>它会自己安装、注册、画测试图，并确认文件落进了你的图库</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>隐私是设计出来的，不是写出来的</h2>
+  <p class="sub">没有账号，没有遥测，没有分析 SDK。</p>
+  <div class="grid">
+    <div class="card"><h3>数据不出本机</h3><p>图就是你的文件。设置与草稿在应用沙盒里，AI Key 只进钥匙串。</p></div>
+    <div class="card"><h3>AI 由你决定</h3><p>只有你主动使用时才发请求，且发往你自己配置的模型服务；用 Ollama 完全不出本机。</p></div>
+    <div class="card"><h3>备份可选</h3><p>iCloud 备份副本默认关闭，开启后由 macOS 负责传输与加密，我们不运营任何服务器。</p></div>
+  </div>
+  <p style="margin-top:18px"><a href="./privacy.html">阅读完整隐私协议 →</a></p>
+</div></section>
+
+<section id="status"><div class="wrap">
   <h2>上架状态</h2>
-  <p>macOS 版正在准备上架 App Store，本页会随之更新。</p>
-</div>
-
-<div data-lang="en">
-  <h1>Diagrams you can actually edit</h1>
-  <p class="lead">FlowMind is a macOS flowchart and mind-map tool: real structured shapes, smart layout, AI that edits your canvas — and your files stay yours.</p>
-  <div class="card">
-    <p style="margin:0"><b>Diagrams are real objects</b> — orthogonal routing, swimlanes, ER tables, mind maps. Select them, edit them, align them — not a picture.</p>
+  <p class="sub">macOS 版正在准备上架 App Store。本页与 GitHub 会同步更新。</p>
+  <div class="rows">
+    <div><b>平台</b>macOS 11 及以上</div>
+    <div><b>分发</b>App Store</div>
+    <div><b>语言</b>中文 / English</div>
   </div>
-  <h2>Your diagrams live in a folder you choose</h2>
-  <p>Pick a folder as your library. Every diagram is a plain file in Finder — back it up, put it in git, send it to a colleague.</p>
-  <h2>Let an Agent draw for you</h2>
-  <p>Works with any MCP client (Claude Code, Codex, Cursor, …):</p>
-  <pre>npx -y https://github.com/diqibadao/flowmind/releases/download/v0.7.0/flowmind-mcp-0.7.0.tgz</pre>
-  <p>See the <a href="./support.html">support page</a> for setup details.</p>
-  <h2>Status</h2>
-  <p>Coming to the Mac App Store. This page will be updated.</p>
-</div>
+</div></section>
+</div><div data-lang="en">
+<div class="hero"><div class="wrap">
+  <img class="logo" src="../assets/logo.png" alt="FlowMind">
+  <h1>Diagrams that are <em>right</em>,<br>not just drawn</h1>
+  <p class="lead">FlowMind is a macOS flowchart and mind-map tool. Every connector is an object, every diagram is your own file.</p>
+  <div class="cta">
+    <a class="btn disabled" href="#status">Coming to the Mac App Store</a>
+    <a class="btn ghost" href="#agent">Let an Agent draw</a>
+    <a class="btn ghost" href="https://github.com/diqibadao/flowmind">GitHub</a>
+  </div>
+</div></div>
 
-<footer>
-  <span data-lang="zh" class="on">© 2026 FlowMind · <a href="./privacy.html">隐私协议</a> · <a href="./support.html">支持</a> · <a href="https://github.com/diqibadao/flowmind/issues">反馈</a></span>
-  <span data-lang="en">© 2026 FlowMind · <a href="./privacy.html">Privacy</a> · <a href="./support.html">Support</a> · <a href="https://github.com/diqibadao/flowmind/issues">Issues</a></span>
-</footer>
-</div>
+<section><div class="wrap">
+  <h2>Three things that are different</h2>
+  <p class="sub">Not “another drawing app” — three concrete choices.</p>
+  <div class="grid">
+    <div class="card"><div class="ico">◈</div><h3>Real objects</h3><p>Orthogonal routing, anchor snapping, swimlanes, ER tables, mind maps — selectable, editable, alignable. Not a screenshot.</p></div>
+    <div class="card"><div class="ico">▤</div><h3>Your files stay yours</h3><p>Your library is a folder you choose. Visible in Finder — back it up, put it in git, send it to a colleague.</p></div>
+    <div class="card"><div class="ico">✦</div><h3>AI shows the diff first</h3><p>Changes are previewed before they touch the canvas. Every edit is undoable and versioned.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Capabilities</h2>
+  <p class="sub">From a rough sketch to a deliverable architecture diagram.</p>
+  <div class="rows">
+    <div><b>Canvas</b>Flowcharts, mind maps, swimlanes, ER, fishbone, org charts — 19 node types</div>
+    <div><b>Connectors</b>Orthogonal routing, anchor snapping, arrows, labels</div>
+    <div><b>Layout</b>Layered / tree / force, one click</div>
+    <div><b>Align</b>Left–center–right, top–bottom, distribute, z-order, lock, nudge</div>
+    <div><b>Library</b>Thumbnails, search, favourites, trash, my templates</div>
+    <div><b>Templates</b>Microservices, lakehouse, RAG, order fulfilment, state machine, ER, user journey…</div>
+    <div><b>AI</b>Generate / edit / optimise / document with diff preview; OpenAI-compatible or local Ollama</div>
+    <div><b>Versions</b>Auto-saved, manual pinned, three-colour diff, one-click restore</div>
+    <div><b>Formats</b>Mermaid / draw.io / Markdown / OPML / CSV / FreeMind / SVG / PNG / PDF</div>
+  </div>
+</div></section>
+
+<section id="agent"><div class="wrap">
+  <h2>Let an Agent draw for you</h2>
+  <p class="sub">Works with any MCP client.</p>
+  <pre>npx -y https://github.com/diqibadao/flowmind/releases/download/v0.7.0/flowmind-mcp-0.7.0.tgz</pre>
+  <div class="steps" style="margin-top:22px">
+    <div class="step"><div class="n">1</div><div><b>Copy the setup prompt</b><br>FlowMind → Settings → MCP</div></div>
+    <div class="step"><div class="n">2</div><div><b>Paste it to your Agent</b><br>Claude Code, Codex, Cursor, anything with MCP</div></div>
+    <div class="step"><div class="n">3</div><div><b>Wait for “done”</b><br>It installs, registers and draws a test diagram into your library</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Privacy by design</h2>
+  <p class="sub">No account. No telemetry. No analytics SDKs.</p>
+  <div class="grid">
+    <div class="card"><h3>Data stays local</h3><p>Diagrams are your files; settings live in the sandbox; AI keys live in the Keychain.</p></div>
+    <div class="card"><h3>AI on your terms</h3><p>Requests go only to the model service you configured. With Ollama, nothing leaves your Mac.</p></div>
+    <div class="card"><h3>Backup is opt-in</h3><p>iCloud backup is off by default; when on, Apple handles transport and encryption. We run no servers.</p></div>
+  </div>
+  <p style="margin-top:18px"><a href="./privacy.html">Read the full policy →</a></p>
+</div></section>
+
+<section id="status"><div class="wrap">
+  <h2>Status</h2>
+  <p class="sub">Coming soon to the Mac App Store. This page and GitHub will be updated.</p>
+  <div class="rows">
+    <div><b>Platform</b>macOS 11 or later</div>
+    <div><b>Distribution</b>Mac App Store</div>
+    <div><b>Languages</b>Chinese / English</div>
+  </div>
+</div></section>
+</div></main>
+<footer><div class="wrap">
+  <span>© 2026 FlowMind</span>
+  <a href="./privacy.html">隐私协议</a><a href="./support.html">支持</a>
+  <a href="https://github.com/diqibadao/flowmind">GitHub</a>
+  <span style="margin-left:auto">人专注逻辑，工具负责排版。</span>
+</div></footer>
 <script>
-document.querySelectorAll('nav.lang button').forEach(function(b){
-  b.addEventListener('click', function(){
-    var l = b.dataset.set;
-    document.querySelectorAll('nav.lang button').forEach(function(x){ x.classList.toggle('on', x === b); });
-    document.querySelectorAll('[data-lang]').forEach(function(el){ el.classList.toggle('on', el.dataset.lang === l); });
-    document.documentElement.lang = (l === 'zh' ? 'zh-CN' : 'en');
+document.querySelectorAll('.lang button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var l=b.dataset.set;
+    document.querySelectorAll('.lang button').forEach(function(x){x.classList.toggle('on',x===b);});
+    document.querySelectorAll('[data-lang]').forEach(function(el){el.classList.toggle('on',el.dataset.lang===l);});
+    document.documentElement.lang=(l==='zh'?'zh-CN':'en');
   });
 });
 </script>
