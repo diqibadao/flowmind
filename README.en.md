@@ -45,7 +45,25 @@ Native macOS · local storage + iCloud backup · AI editing · Git version histo
   <img src="docs/assets/screenshots/07-mindmap-copilot.webp" width="100%" alt="AI Copilot sidebar">
 </p>
 
-## Seven things it does
+## Why FlowMind exists
+
+If you have ever drawn a flowchart, you know the moment. You are halfway through a diagram, your hand slips, half the canvas shifts, and you undo — past the thing you wanted, into something else you did not mean to touch. Or you only wanted to change the words inside one box, and the box dragged its arrows along with it.
+
+Then there is the quieter failure. The architecture diagram you drew three months ago is somewhere in a chat thread. You cannot find it — and even when you do, you cannot tell whether it still matches the system.
+
+So we made a very specific decision: **make everything on the canvas a real object.** Nodes are objects. Connectors are objects. Swimlanes and table fields too. Once a thing has an identity it can be selected on its own, aligned precisely, remembered, and compared. This is not a matter of looking nicer — it is the difference between being able to change your diagram and being able to change it safely.
+
+The second decision came from a more ordinary fear: **what if I break it?** So every diagram carries a full version history. Each save leaves a snapshot, manual versions are kept forever, and after an edit you can see a three-colour diff — which connector moved, which label disappeared, which box changed fill — line by line. Don't like it? One click back. We built this for one reason: **people only edit boldly when they know they can go back.** A tool that makes you cautious will slowly make your diagrams worse.
+
+Third: **AI is a co-pilot, not a chauffeur.** It can read your diagram and it can change it — but it shows you the diff first, and it only writes after you agree. Generating a pretty picture is easy; the hard part is that you can keep editing what it produced. So we insist it edits *objects*, not replaces your drawing with an image.
+
+Fourth, about ownership: **the diagram is yours.** It is an ordinary file in a folder you choose — visible in Finder, easy to back up, ready for git, simple to send to a colleague, and yours to keep if you ever stop using FlowMind. iCloud backup is an extra copy (optional, off by default), not a lock-in to somebody's server.
+
+The last decision is restraint. FlowMind does not try to draw everything — freeform canvas, whiteboards, stickers, annotations all have better tools. We want to do one thing properly: **structured diagrams, from first sketch to something you can hand over.**
+
+## What it does
+
+
 
 | | Capability | What it means |
 |---|---|---|
@@ -57,7 +75,7 @@ Native macOS · local storage + iCloud backup · AI editing · Git version histo
 | 🕘 | **Git version history** | Every save is committed; manual versions are kept forever and can be annotated |
 | 🔍 | **Compare & roll back** | Three-colour diff (green added / red removed / blue changed) including connectors and labels; restore any version in one click |
 
-## Also included
+## Also in the box
 
 - **Formats**: import Mermaid, draw.io, Markdown, OPML, CSV, FreeMind; export SVG / PNG / PDF
 - **Smart layout**: layered, tree and force layouts in one click
