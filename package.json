@@ -1,0 +1,32 @@
+{
+  "name": "flowmind-mcp",
+  "version": "0.7.0",
+  "description": "FlowMind MCP server & CLI — let AI agents create editable .flowmind diagrams",
+  "license": "UNLICENSED",
+  "private": false,
+  "bin": {
+    "flowmind-mcp": "flowmind-mcp.js",
+    "flowmind": "flowmind-cli.js"
+  },
+  "files": [
+    "flowmind-mcp.js",
+    "flowmind-cli.js",
+    "kernel.js",
+    "logic.js",
+    "mermaid.js",
+    "README.md"
+  ],
+  "scripts": {
+    "prepack": "node sync-kernel.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "flowmind",
+    "mcp",
+    "diagram",
+    "flowchart",
+    "mermaid"
+  ]
+}

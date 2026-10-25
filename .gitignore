@@ -1,0 +1,4 @@
+# 内核由发布流程从 App 源码同步进来（不在仓库里存第二份）
+logic.js
+mermaid.js
+*.tgz
