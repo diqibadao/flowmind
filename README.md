@@ -1,5 +1,7 @@
 <div align="center">
 
+**简体中文** · [English](README.en.md)
+
 <img src="assets/logo.png" width="88" alt="FlowMind">
 
 # FlowMind
