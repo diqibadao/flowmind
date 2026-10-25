@@ -2,7 +2,7 @@
 
 [简体中文](README.md) · **English**
 
-<img src="assets/logo.png" width="88" alt="FlowMind">
+<img src="docs/assets/logo.png" width="88" alt="FlowMind">
 
 # FlowMind
 
@@ -27,12 +27,12 @@ Native macOS · local storage + iCloud backup · AI editing · Git version histo
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/01-flowchart.png" width="49%" alt="Microservice architecture">
-  <img src="assets/screenshots/02-swimlane.png" width="49%" alt="Order fulfilment swimlanes">
+  <img src="docs/assets/screenshots/01-flowchart.png" width="49%" alt="Microservice architecture">
+  <img src="docs/assets/screenshots/02-swimlane.png" width="49%" alt="Order fulfilment swimlanes">
 </p>
 <p align="center">
-  <img src="assets/screenshots/03-er.png" width="49%" alt="ER diagram">
-  <img src="assets/screenshots/04-templates.png" width="49%" alt="Template library">
+  <img src="docs/assets/screenshots/03-er.png" width="49%" alt="ER diagram">
+  <img src="docs/assets/screenshots/04-templates.png" width="49%" alt="Template library">
 </p>
 
 ## Seven things it does
