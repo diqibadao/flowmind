@@ -27,12 +27,22 @@ Native macOS · local storage + iCloud backup · AI editing · Git version histo
 ## Screenshots
 
 <p align="center">
-  <img src="docs/assets/screenshots/01-flowchart.png" width="49%" alt="Microservice architecture">
-  <img src="docs/assets/screenshots/02-swimlane.png" width="49%" alt="Order fulfilment swimlanes">
+  <img src="docs/assets/screenshots/00-home.webp" width="100%" alt="Home: start creating, recent edits and templates">
 </p>
 <p align="center">
-  <img src="docs/assets/screenshots/03-er.png" width="49%" alt="ER diagram">
-  <img src="docs/assets/screenshots/04-templates.png" width="49%" alt="Template library">
+  <img src="docs/assets/screenshots/01-mindmap.webp" width="49%" alt="Mind map">
+  <img src="docs/assets/screenshots/02-templates.webp" width="49%" alt="Template library">
+</p>
+<p align="center">
+  <img src="docs/assets/screenshots/03-er.webp" width="49%" alt="Entity-relationship diagram">
+  <img src="docs/assets/screenshots/04-journey.webp" width="49%" alt="User journey map">
+</p>
+<p align="center">
+  <img src="docs/assets/screenshots/05-versions.webp" width="49%" alt="Version history and preview">
+  <img src="docs/assets/screenshots/06-versions-diff.webp" width="49%" alt="Three-colour diff">
+</p>
+<p align="center">
+  <img src="docs/assets/screenshots/07-mindmap-copilot.webp" width="100%" alt="AI Copilot sidebar">
 </p>
 
 ## Seven things it does

@@ -27,12 +27,22 @@ macOS 原生 · 本地存储 + iCloud 备份 · AI 改图 · Git 版本历史 ·
 ## 界面
 
 <p align="center">
-  <img src="docs/assets/screenshots/01-flowchart.png" width="49%" alt="微服务架构图">
-  <img src="docs/assets/screenshots/02-swimlane.png" width="49%" alt="电商订单履约泳道图">
+  <img src="docs/assets/screenshots/00-home.webp" width="100%" alt="首页：开始创作、最近编辑与模板">
 </p>
 <p align="center">
-  <img src="docs/assets/screenshots/03-er.png" width="49%" alt="电商核心实体关系图">
-  <img src="docs/assets/screenshots/04-templates.png" width="49%" alt="模板库">
+  <img src="docs/assets/screenshots/01-mindmap.webp" width="49%" alt="思维导图 · 学科导图">
+  <img src="docs/assets/screenshots/02-templates.webp" width="49%" alt="模板库">
+</p>
+<p align="center">
+  <img src="docs/assets/screenshots/03-er.webp" width="49%" alt="电商核心实体关系图">
+  <img src="docs/assets/screenshots/04-journey.webp" width="49%" alt="用户旅程地图">
+</p>
+<p align="center">
+  <img src="docs/assets/screenshots/05-versions.webp" width="49%" alt="版本管理与版本预览">
+  <img src="docs/assets/screenshots/06-versions-diff.webp" width="49%" alt="三色差异对比">
+</p>
+<p align="center">
+  <img src="docs/assets/screenshots/07-mindmap-copilot.webp" width="100%" alt="AI Copilot 侧栏">
 </p>
 
 ## 七个核心能力
